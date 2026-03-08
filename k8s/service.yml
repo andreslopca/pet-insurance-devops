@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pet-insurance-api
+  namespace: pet-insurance
+  labels:
+    app: pet-insurance-api
+spec:
+  selector:
+    app: pet-insurance-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: ClusterIP
